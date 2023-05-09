@@ -25,7 +25,7 @@ router.get('/', async (req, res, next) => {
         [industryCode]
       );
       let companies = compResult.rows;
-      let industry = { code: industryCode, companies: companies.map(com => com.code) };
+      let industry = { code: industryCode,industry:results.rows[i]['industry'], companies: companies.map(com => com.code) };
       industries.push(industry);
     }
 
